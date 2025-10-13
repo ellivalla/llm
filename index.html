@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akadeemiliste rollide promptide tööriist</title>
+  <title>Promptide tööriist</title>
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; padding: 2rem; max-width: 1100px; margin: auto; background-color: #f9f9f9; }
     h1 { color: #1b5e20; }
@@ -27,10 +27,10 @@
 
   <input class="search" type="text" id="searchInput" onkeyup="filterPrompts()" placeholder="Otsi kategooria või märksõna järgi" />
 
-  <h1>Akadeemiliste rollide promptide tööriist</h1>
-  <p>Alljärgnevad näidispromptid sobivad õppejõududele, teaduritele ja projektijuhtidele. Kopeeri sobiv tekst ning täienda konteksti, rolli ja väljundi nõudeid. Näiteks lisa õppeaine nimi, sihtrühm, projekti faas, tähtajad või formaadipiirangud.</p>
+  <h1>Promptide tööriist</h1>
+  <p>Kopeeri sobiv tekst ning täienda konteksti, rolli ja väljundi nõudeid. Näiteks lisa õppeaine nimi, sihtrühm, projekti faas, tähtajad või formaadipiirangud.</p>
 
-  <!-- Kiirkäivitus -->
+  <!-- Harjutamiseks -->
   <h2>Kiirkäivitus</h2>
   <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
     <code>Koosta tänase tiimikoosoleku päevakava. Lähtetingimused: osalejad [nimed], aeg [kellaaeg], siht [eesmärk]. Lõppväljund: 45 minuti ajakava, vastutajad iga punkti juures, otsused mida on vaja teha.</code>
@@ -153,9 +153,7 @@
     <code>Koosta projektikirjade mallid: staatusuuendus, riskiteavitus, tänukiri, meeldetuletus. Hoia toon selge ja viisakas.</code>
   </div>
 
-  <p class="note">Vihje: lisa roll ja kontekst. Näiteks ütle Sa oled kursusejuht, või Sa oled projektijuht avaliku sektori projektis. Piira väljundi vormi, näiteks 200 sõna, tabel, punktid. Luba mudelil küsida täpsustusi kui sisend on puudulik.</p>
-
-  <script>
+ <script>
     function copyPrompt(button) {
       const text = button.nextElementSibling.innerText;
       navigator.clipboard.writeText(text).then(() => {
