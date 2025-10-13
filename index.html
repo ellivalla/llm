@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akadeemiliste rollide promptide tööriist</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 2rem; max-width: 1100px; margin: auto; background-color: #f9f9f9; }
+    h1 { color: #1b5e20; }
+    h2 { color: #2e7d32; margin-top: 2em; }
+    .prompt-block { background: #ffffff; border-left: 5px solid #43a047; padding: 1rem; margin: 1.25rem 0; position: relative; }
+    .btn-top { display: inline-block; background-color: #2e7d32; color: white; padding: 0.6rem 1.2rem; margin: 0.25rem 0.25rem 1rem 0; text-decoration: none; border-radius: 4px; }
+    .note { font-size: 0.9rem; color: #555; background: #fff; border-left: 4px solid #90caf9; padding: 0.75rem; }
+    code { display: block; background: #f1f1f1; padding: 0.65rem; margin-top: 0.5rem; white-space: pre-wrap; }
+    .copy-btn { position: absolute; top: 1rem; right: 1rem; background-color: #1565c0; color: white; border: none; padding: 0.35rem 0.7rem; border-radius: 4px; cursor: pointer; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .search { width: 100%; padding: 0.75rem; margin: 1rem 0; border: 1px solid #ccc; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a class="btn-top" href="https://chatgpt.com" target="_blank" rel="noopener">Ava ChatGPT</a>
+    <a class="btn-top" href="https://gemini.google.com" target="_blank" rel="noopener">Ava Gemini</a>
+    <a class="btn-top" href="https://claude.ai" target="_blank" rel="noopener">Ava Claude</a>
+  </div>
+
+  <input class="search" type="text" id="searchInput" onkeyup="filterPrompts()" placeholder="Otsi kategooria või märksõna järgi" />
+
+  <h1>Akadeemiliste rollide promptide tööriist</h1>
+  <p>Alljärgnevad näidispromptid sobivad õppejõududele, teaduritele ja projektijuhtidele. Kopeeri sobiv tekst ning täienda konteksti, rolli ja väljundi nõudeid. Näiteks lisa õppeaine nimi, sihtrühm, projekti faas, tähtajad või formaadipiirangud.</p>
+
+  <!-- Kiirkäivitus -->
+  <h2>Kiirkäivitus</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta tänase tiimikoosoleku päevakava. Lähtetingimused: osalejad [nimed], aeg [kellaaeg], siht [eesmärk]. Lõppväljund: 45 minuti ajakava, vastutajad iga punkti juures, otsused mida on vaja teha.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kokkuvõte kolmest olulisest mõttest allolevast tekstist. Lisa 3 praktilist järgmise sammu soovitust, mis on teostatavad ühe nädala jooksul. Tekst:</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjuta viisakas ja konkreetne vastus partnerile, kes palub tähtaega pikendada. Hoia toon professionaalne ja lahendusele suunatud. Paku kaks alternatiivset tähtaega ning kirjelda mõju projekti graafikule.</code>
+  </div>
+
+  <!-- Õppejõud: kursused ja hindamine -->
+  <h2>Õppejõud: kursused, hindamine, õppematerjalid</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Planeeri 12-nädalase kursuse struktuur teemal [teema]. Väljund: tabel, kus on nädal, teema, õpiväljund, võtmematerjal, tegevused auditooriumis, kodune ülesanne, hindamisviis.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta hindamismaatriks ehk rubriik rühmaprojekti jaoks. Kriteeriumid: sisu kvaliteet, metodoloogiline korrektsus, meeskonnatöö, esitlus, mõju. Skaala 0 kuni 4, kirjeldused igale tasemele.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Loo 90 minuti loengu konspekt teemal [teema]. Sisalda eesmärgid, 3 peatükki, näited, harjutus, lühitest ning slaidipealkirjad.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjuta akadeemilise aususe ja allikaviitamise juhis bakalaureusetudengile. Vorm: punktid, praktilised näited, tüüpilised vead, kontrollnimekiri enne töö esitamist.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Genereeri 6 aruteluküsimust juhtumianalüüsi jaoks teemal [juhtumi lühikokkuvõte]. Küsimused peaksid toetama kriitilist mõtlemist ja siduma teooria praktikaga.</code>
+  </div>
+
+  <!-- Teadurid: kirjandus, meetodid, artiklid -->
+  <h2>Teadurid: kirjanduse otsing, meetodid, käsikirjad</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Sõnasta uurimisküsimus ja hüpotees teemal [teema]. Paku kolm varianti: kitsas fookus, mõõdukalt lai fookus, lai süntees. Selgita valiku plusse ja miinuseid.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta süsteemse otsingu algstringid andmebaasidele Scopus ja PubMed teemal [teema]. Kasuta boolenoperaatoreid, märksõnu ja sünonüüme. Esita 2 versiooni: kitsas ja lai. Lisa kaasamis ja välistamiskriteeriumid.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjuta artikli kokkuvõte struktuuris IMRaD teemal [teema]. Maksimaalselt 250 sõna. Lõpus 5 märksõna.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Vali sobiv meetod andmete analüüsiks antud uuringudisaini põhjal. Sisend: disain [nt ristlõige, RCT], muutuja tüüp [nt binaarne, pidev], valimi suurus [n]. Väljund: meetodi nimi, eeldused, kontrollid, näidisraport fraasid.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjelda reprodutseeritavuse kontrollnimekiri: andmete haldus, kood, versioonihaldus, juhuslikkuse fikseerimine, eelregistreerimine. Väljund: tabel konkreetsete sammudega.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta kaaskiri ajakirjale [ajakirja nimi] artiklile teemal [teema]. Toon professionaalne ja lühike, rõhuta panust, sobivust ja võimalikku huvi lugejatele.</code>
+  </div>
+
+  <!-- Projektijuhid: planeerimine ja juhtimine -->
+  <h2>Projektijuhid: planeerimine, riskid, suhtlus</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta WBS ehk tööde jaotus struktuur projekti jaoks. Sisend: projekti eesmärk [kirjeldus], kestus [kuud], eelarve [€]. Väljund: hierarhiline loetelu tööpakettidest ja tööülesannetest, vastutaja rollid.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Loo RACI maatriks projekti põhitegevustele. Esita tabelis tegevus, R, A, C, I rollid. Lisa lühikommentaarid rollipiiride kohta.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta riskiregister. Väljund: tabel väljadega risk, tõenäosus, mõju, riskitase, leevendusplaan, omanik, järelevalve sagedus.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjuta kuu kokkuvõtte raport sidusrühmadele. Struktuur: saavutused, kõrvalekalded plaanist, riskid ja otsused, järgmise kuu fookus, vajadused partneritelt. Piira pikkus 300 sõna.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Muuda koosoleku märkmed tegevusteks. Sisend: vabas vormis protokoll. Väljund: Jira tiketi mallid või tegevusnimekiri koos vastutajate ja tähtaegadega.</code>
+  </div>
+
+  <!-- Andmed ja analüütika -->
+  <h2>Andmed ja analüütika: spetsifikatsioon, EDA, visualiseerimine</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjelda andmekogumi sõnastik. Sisend: veergude nimed ja lühikirjeldused. Väljund: tabel väljadega nimi, tüüp, lubatud väärtused, puuduvate väärtuste käsitlus, tundlikkus, kommentaar.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Paku esmase uuriva andmeanalüüsi sammud antud andmestikule. Lisa kontrollid kvaliteedile, võimalikud anomaaliad, 3 kasulikku graafikut ja nende tõlgendused.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Genereeri SQL päringud järgmise skeemi põhjal, et koostada kuu kokkuvõtte raport. Sisend: tabelid ja suhted tekstina. Väljund: 3 päringut koos lühiselgitustega.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjuta pseudokood või Pythonilaadne visand analüüsi torujuhtme jaoks: laadimine, puhastus, feature engineering, mudel, hindamine, aruandlus. Lisa logimise ja versioonihalduse soovitused.</code>
+  </div>
+
+  <!-- Suhtlus ja kirjutamine -->
+  <h2>Suhtlus ja kirjutamine: kokkuvõtted, pitchid, poliitikasoovitused</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta üheleheküljeline ülevaade projektist. Struktuur: probleem, lahendus, väärtus sidusrühmadele, teekaart, võtmenäitajad, kontakt.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjuta lühike kõne sõnumiga miks, mida, kuidas. Sihtrühm: ülikooli juhtkond. Teema: [teema]. Pikkus 2 minutit.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Valmista 250 sõnaline projekti kokkuvõte rahastusetaotluse jaoks. Tõsta esile uudsus, mõju, teostatavus, meeskonna sobivus.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Loo pressiteate kava. Osad: pealkiri, lühikokkuvõte, tsitaadid, taust, kontakt. Lisa 3 küsimust ajakirjanikelt mida tasub ette näha.</code>
+  </div>
+
+  <!-- Eetika, andmekaitse, vastavus -->
+  <h2>Eetika, andmekaitse, vastavus</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta andmehalduse plaani mall teadusprojektile. Jaotised: andmete päritolu, ligipääsud, pseudonüümimine, säilitamine, jagamine, arhiveerimine, vastutajad.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Valmista eetikakomitee taotluse sisukorra visand projektile [nimi]. Lisa riskid osalejatele, riskide leevendamine, informeeritud nõusoleku protsess, privaatsus, väljamaksete loogika.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Kirjelda riskipõhine lähenemine automatiseeritud otsustustoe kasutamisel. Väljund: printsiibid, tehnilised kontrollid, protseduurid, auditeerimine, läbipaistvus, koolitus.</code>
+  </div>
+
+  <!-- Tootlikkus ja automatiseerimine -->
+  <h2>Tootlikkus ja automatiseerimine</h2>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Loo korduskasutatav kontrollnimekiri enne taotluse esitamist. Punktid: vorminõuded, eelarve, lisad, allkirjad, viited, mõjuseire näitajad.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Genereeri standardne koosoleku kutse tekst koos päevakava, eesmärkide ja eeltöödega. Lisa kohtumise lõpus kasutatav tegevuste kokkuvõtte mall.</code>
+  </div>
+  <div class="prompt-block"><button class="copy-btn" onclick="copyPrompt(this)">Kopeeri</button>
+    <code>Koosta projektikirjade mallid: staatusuuendus, riskiteavitus, tänukiri, meeldetuletus. Hoia toon selge ja viisakas.</code>
+  </div>
+
+  <p class="note">Vihje: lisa roll ja kontekst. Näiteks ütle Sa oled kursusejuht, või Sa oled projektijuht avaliku sektori projektis. Piira väljundi vormi, näiteks 200 sõna, tabel, punktid. Luba mudelil küsida täpsustusi kui sisend on puudulik.</p>
+
+  <script>
+    function copyPrompt(button) {
+      const text = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        button.innerText = "Kopeeritud!";
+        setTimeout(() => button.innerText = "Kopeeri", 1800);
+      });
+    }
+
+    function filterPrompts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const blocks = document.querySelectorAll('.prompt-block');
+      const headers = document.querySelectorAll('h2');
+
+      blocks.forEach(block => {
+        const text = block.innerText.toLowerCase();
+        block.style.display = text.includes(input) ? '' : 'none';
+      });
+
+      headers.forEach(header => {
+        // hide header if none of its following prompt-block siblings are visible
+        let sib = header.nextElementSibling;
+        let anyVisible = false;
+        while (sib && sib.classList && (sib.classList.contains('prompt-block') || sib.tagName === 'H2' === false)) {
+          if (sib.classList.contains('prompt-block')) {
+            if (sib.style.display !== 'none') { anyVisible = true; break; }
+          }
+          sib = sib.nextElementSibling;
+        }
+        header.style.display = anyVisible ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
